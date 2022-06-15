@@ -227,7 +227,7 @@ class report ():
         else:
             setDateLink = '\%s年度\%s年%s月'%(self.year,self.year,self.mon)
 
-        link        = r"\\Svjptkt1fs01\mso\ネットワークオペレーションセンター\01_部内共有\01_広域監視G\03_目標\2017年度\2017年度広域監視G_業務量可視化\00.日報"
+        link        = r"[Link]"
         self.path   = link + setDateLink
 
         # 설정한 경로로 이동
@@ -439,8 +439,8 @@ class report ():
                 try :
                     writer, memo = text.split(':', 2)
                     # 관리자가 작성한 메모는 제외
-                    administrator1 = 'Kitayama, Naonori (北山 直徳)'
-                    administrator2 = 'Minamikawa, Yasuyuki (南川 康幸)'
+                    administrator1 = '[Name]'
+                    administrator2 = '[Name]'
 
                     if (writer != administrator1 or writer != administrator2):
                         self.sheet.append([self.name, argdateCheckingNow, argR19.value, argMsg, memo])
